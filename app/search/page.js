@@ -7,12 +7,10 @@ import { useSearchParams } from "next/navigation";
 import { format } from "date-fns";
 import { searchResults } from "@/assets/exploreData";
 
-const Search = (props) => {
-  const { searchResults } = props;
+const Search = () => {
+  
   const searchParams = useSearchParams();
   const router = useRouter();
-
-  console.log(searchResults);
 
   // es6 destructuring
   const { location, startDate, endDate, noOfGuests } = Object.fromEntries(
