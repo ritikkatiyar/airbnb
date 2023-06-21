@@ -74,7 +74,7 @@ export const searchResults = [
     lat: 51.5421655,
   },
   {
-    img: "https://links.papareact.com/hz2",
+    img: "https://links.papareact.com/6as",
     location: "Private room in center of London",
     title: "Independant luxury studio apartment",
     description:

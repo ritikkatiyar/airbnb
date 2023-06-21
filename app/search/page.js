@@ -6,9 +6,10 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { format } from "date-fns";
 import { searchResults } from "@/assets/exploreData";
+import InfoCard from "@/components/InfoCard";
+
 
 const Search = () => {
-  
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -40,7 +41,26 @@ const Search = () => {
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
+          <div className="flex flex-col">
+          {searchResults.map(
+            ({ img, location, title, description, star, price, total }) => (
+              <InfoCard
+                key={img}
+                img={img}
+                location={location}
+                title={title}
+                description={description}
+                star={star}
+                price={price}
+                total={total}
+              />
+            )
+          )}
+          </div>
         </section>
+        {/* <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map/>
+        </section> */}
       </main>
       <Footer />
     </div>
