@@ -51,18 +51,18 @@ const Search = (props) => {
 
 export default Search;
 
-export async function getServerSideProps() {
-  try {
-    const searchResults = await axios.get("https://links.papareact.com/isz");
-    return {
-      props: {
-        searchResults: searchResults,
-      },
-    };
-  } catch (err) {
-    console.log(err);
-    return { props: {
-      searchResults: null,
-    } };
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     const searchResults = await axios.get("https://www.jsonkeeper.com/b/5NPS");
+//     return {
+//       props: {
+//         searchResults: searchResults,
+//       },
+//     };
+//   } catch (err) {
+//     console.log(err);
+//     return { props: {
+//       searchResults: null,
+//     } };
+//   }
+// }
